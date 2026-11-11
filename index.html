@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accessibility Widget – Testseite</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#inhalt">Zum Inhalt springen</a>
+      <h1>Accessibility Widget testen</h1>
+      <p>Eine einfache Testseite für alle wichtigen Widget-Funktionen.</p>
+    </header>
+
+    <main id="inhalt">
+      <section>
+        <h2>Text und Überschriften</h2>
+        <p>
+          Dieser Text eignet sich für Schriftgröße, Zeilenabstand, Schriftart,
+          Kontrast, Vorlesen und Bionic Reading.
+        </p>
+        <p>
+          Teste außerdem die
+          <a href="#formular">Links und Formularfelder</a> sowie die
+          Tastaturbedienung.
+        </p>
+        <h3>Langer Absatz</h3>
+        <p class="long-text">
+          Dieser lange Absatz testet das Einklappen von Text. Barrierefreie
+          Inhalte sollen gut lesbar, verständlich und mit verschiedenen
+          Hilfsmitteln nutzbar sein. Aktiviere im Widget die entsprechende
+          Funktion, um diesen Text einzuklappen. Danach kannst du ihn über „Mehr
+          anzeigen“ wieder vollständig öffnen. Bewege den Mauszeiger über den
+          Absatz, um die Absatzmarkierung oder das Leselineal auszuprobieren.
+          Markiere Text und starte anschließend die Vorlesefunktion.
+        </p>
+        <blockquote>„Gute Zugänglichkeit hilft allen Menschen.“</blockquote>
+      </section>
+
+      <section>
+        <h2>Bewegung und Ablenkungen</h2>
+        <div class="animated" data-parallax>
+          <strong>Animiertes Beispiel</strong>
+          <span>Animationen reduzieren und Ablenkungen ausblenden.</span>
+        </div>
+        <div class="carousel" data-carousel>
+          <strong id="slide">Carousel</strong>
+          <button type="button" id="next-slide">Nächster Inhalt</button>
+        </div>
+        <aside class="notice" role="dialog" aria-label="Hinweis">
+          <strong>Hinweis / Seitenleiste</strong>
+          <p>Dieses Element wird beim Ausblenden von Ablenkungen entfernt.</p>
+          <button type="button" id="close-notice">Schließen</button>
+        </aside>
+      </section>
+
+      <section id="formular">
+        <h2>Formular und Tabelle</h2>
+        <form id="demo-form">
+          <label for="name">Name</label>
+          <input id="name" name="name" required />
+          <label for="message">Nachricht</label>
+          <textarea id="message" name="message" rows="3"></textarea>
+          <button type="submit">Absenden</button>
+          <p id="form-status" role="status"></p>
+        </form>
+        <table>
+          <caption>
+            Beispiel-Tabelle
+          </caption>
+          <thead>
+            <tr>
+              <th>Funktion</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Lesbarkeit</th>
+              <td>Bereit</td>
+            </tr>
+            <tr>
+              <th>Navigation</th>
+              <td>Bereit</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>Öffne das Widget unten links, um die Einstellungen zu testen.</p>
+      <nav aria-label="Footer-Navigation">
+        <a href="https://henrymeyer.de/legal/imprint">Impressum</a> |
+        <a href="https://github.com/Projekt-Ansichtssache">GitHub</a>
+      </nav>
+      <p>
+        Diese Website verwendet keine Cookies. Das Formular sendet keine Daten;
+        alles dient ausschließlich der Demonstration.
+      </p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/gh/Projekt-Ansichtssache/accessibility-widget@main/accessibility-widget.js"
+      defer
+    ></script>
+    <script src="preview.js" defer></script>
+  </body>
+</html>
